@@ -38,12 +38,13 @@ class Galois
 private
 
   def build_set
-    @set    = []
     divisor = dividing
-
-    until divisor > boundaries.max
-      @set << divisor
-      divisor += dividing
+    
+    @set = [].tap do |set|
+      until divisor > boundaries.max
+        set << divisor
+        divisor += dividing
+      end
     end 
   end 
 end

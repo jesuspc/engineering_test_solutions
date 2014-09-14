@@ -6,7 +6,7 @@ module Andrei
 
     def initialize(x, y, t, options = {})
       @x, @y, @t  = x, y, t
-      @precission = options.fetch :precission, 5
+      @precission = options.fetch :precission, 3
       
       @tuple = [x, y]
     end

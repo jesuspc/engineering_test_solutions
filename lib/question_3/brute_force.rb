@@ -15,8 +15,8 @@ module BruteForce
     end
   end
 
-  def self.probabilities(t, options = {repetitions: DEFAULT_REPETITIONS})
-    repetitions = options[:repetitions]
+  def self.probabilities(t, options = {})
+    repetitions = options.fetch :repetitions, DEFAULT_REPETITIONS
     accumulator = Hash.new { |hash, key| hash[key] = 0 }
    
     repetitions.times { accumulator[try t] += 1 }
